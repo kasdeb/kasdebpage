@@ -1,0 +1,20 @@
+.search-table {
+  width: 100%;
+}
+.search-table td {
+  padding: 8px;
+}
+.search-table td.left {
+  text-align: left;
+  width: 65%;
+}
+.search-table td.right {
+  text-align: right;
+  width: 35%;
+}
+.search-list-header td {
+  border-bottom: 2px solid var(--rich-black);
+}
+.search-list-row:nth-child(2n-1) {
+  background-color: var(--cultured);
+}

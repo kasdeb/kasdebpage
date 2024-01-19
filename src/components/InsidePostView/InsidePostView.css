@@ -1,0 +1,36 @@
+.inside-post-wrapper {
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: var(--platinum-dark);
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.card-info {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--rich-black);
+}
+
+.card-info a {
+  text-decoration: none !important;
+  color: var(--celtic-blue) !important;
+}
+
+.post-text {
+  display: block;
+  margin: 20px 0 0px 0;
+  width: 100%;
+}
+
+.post-text h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Righteous", Sans-Serif;
+}

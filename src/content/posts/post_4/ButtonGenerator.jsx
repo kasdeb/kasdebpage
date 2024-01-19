@@ -2,22 +2,36 @@ import React, { useState } from "react";
 import { SketchExample } from "./colorpicker.jsx";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
+import "./ButtonGenerator.css";
 
 export default function ButtonGenerator() {
   const copyHandler = () => {
-    navigator.clipboard.writeText(finalButtonCode);
+    navigator.clipboard.writeText(
+      finalButtonCode
+    );
   };
 
-  const [bgcolor, setBgcolor] = useState("#6730E3");
-  const [borderColor, setBordercolor] = useState("#6730E3");
-  const [fontColor, setFontColor] = useState("#ffffff");
-  const [buttonText, setButtonText] = useState("REGISTER");
+  const [bgcolor, setBgcolor] =
+    useState("#6730E3");
+  const [borderColor, setBordercolor] =
+    useState("#6730E3");
+  const [fontColor, setFontColor] =
+    useState("#ffffff");
+  const [buttonText, setButtonText] =
+    useState("REGISTER");
   const [buttonURL, setButtonURL] = useState("");
-  const [buttonHeight, setButtonHeight] = useState(37);
-  const [buttonWidth, setButtonWidth] = useState(240);
-  const [buttonBorderRadius, setButtonBorderRadius] = useState(0);
-  const [addButtonBorder, setAddButtonBorder] = useState(false);
-  const [addBorderRadius, setAddBorderRadius] = useState(false);
+  const [buttonHeight, setButtonHeight] =
+    useState(37);
+  const [buttonWidth, setButtonWidth] =
+    useState(240);
+  const [
+    buttonBorderRadius,
+    setButtonBorderRadius
+  ] = useState(0);
+  const [addButtonBorder, setAddButtonBorder] =
+    useState(false);
+  const [addBorderRadius, setAddBorderRadius] =
+    useState(false);
 
   const onChangeHandler = () => {
     setAddButtonBorder(!addButtonBorder);
@@ -28,9 +42,13 @@ export default function ButtonGenerator() {
   };
 
   let radius_type = "";
-  addBorderRadius === true ? (radius_type = "roundrect") : (radius_type = "rect");
+  addBorderRadius === true
+    ? (radius_type = "roundrect")
+    : (radius_type = "rect");
 
-  const arcsize = Math.round(2.5 * buttonBorderRadius);
+  const arcsize = Math.round(
+    2.5 * buttonBorderRadius
+  );
 
   const finalButtonCode = `<div>
   <!--[if mso]>
@@ -68,13 +86,17 @@ export default function ButtonGenerator() {
 </div>`;
 
   return (
-    <div>
+    <>
       <div className="form-group">
-        <label htmlFor="buttonText">Button Text</label>
+        <label htmlFor="buttonText">
+          Button Text
+        </label>
         <input
           name="buttonText"
           className="form-control form-control-sm"
-          onChange={(event) => setButtonText(event.target.value)}
+          onChange={(event) =>
+            setButtonText(event.target.value)
+          }
           value={buttonText}
           type="text"
           id="buttonText"
@@ -83,11 +105,15 @@ export default function ButtonGenerator() {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="buttonURL">Button URL</label>
+        <label htmlFor="buttonURL">
+          Button URL
+        </label>
         <input
           name="buttonURL"
           className="form-control form-control-sm"
-          onChange={(event) => setButtonURL(event.target.value)}
+          onChange={(event) =>
+            setButtonURL(event.target.value)
+          }
           value={buttonURL}
           type="text"
           id="buttonURL"
@@ -96,11 +122,15 @@ export default function ButtonGenerator() {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="buttonHeight">Button Height (px)</label>
+        <label htmlFor="buttonHeight">
+          Button Height (px)
+        </label>
         <input
           name="buttonHeight"
           className="form-control form-control-sm"
-          onChange={(event) => setButtonHeight(event.target.value)}
+          onChange={(event) =>
+            setButtonHeight(event.target.value)
+          }
           value={buttonHeight}
           type="number"
           id="buttonHeight"
@@ -108,11 +138,15 @@ export default function ButtonGenerator() {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="buttonWidth">Button Width (px)</label>
+        <label htmlFor="buttonWidth">
+          Button Width (px)
+        </label>
         <input
           name="buttonWidth"
           className="form-control form-control-sm"
-          onChange={(event) => setButtonWidth(event.target.value)}
+          onChange={(event) =>
+            setButtonWidth(event.target.value)
+          }
           value={buttonWidth}
           type="number"
           id="buttonWidth"
@@ -121,12 +155,17 @@ export default function ButtonGenerator() {
       </div>
 
       <div className="form-group">
-        <div className="picker-box">
+        <div className="picker-wrapper">
           <label htmlFor="buttonFont">Font</label>
-          <SketchExample setColor={setFontColor} defaultColorFont={fontColor} />
+          <SketchExample
+            setColor={setFontColor}
+            defaultColorFont={fontColor}
+          />
         </div>
-        <div className="picker-box">
-          <label htmlFor="buttonBackground">Background</label>
+        <div className="picker-wrapper">
+          <label htmlFor="buttonBackground">
+            Background
+          </label>
           <SketchExample setColor={setBgcolor} />
         </div>
       </div>
@@ -140,11 +179,16 @@ export default function ButtonGenerator() {
             checked={addButtonBorder}
             onChange={onChangeHandler}
           />
-          <label htmlFor="borderColor">Border color</label>
+          <label htmlFor="borderColor">
+            Border color
+          </label>
         </div>
         {addButtonBorder ? (
           <div className="form-group">
-            <SketchExample setColor={setBordercolor} defaultColor={borderColor} />{" "}
+            <SketchExample
+              setColor={setBordercolor}
+              defaultColor={borderColor}
+            />{" "}
           </div>
         ) : null}
         <div className="form-check">
@@ -156,14 +200,20 @@ export default function ButtonGenerator() {
             checked={addBorderRadius}
             onChange={onChangeHandlerBorderRadius}
           />
-          <label htmlFor="buttonBorderRadius">Border radius (px)</label>
+          <label htmlFor="buttonBorderRadius">
+            Border radius (px)
+          </label>
         </div>
         {addBorderRadius ? (
           <div className="form-group">
             <input
               name="buttonBorderRadius"
               className="form-control form-control-sm"
-              onChange={(event) => setButtonBorderRadius(event.target.value)}
+              onChange={(event) =>
+                setButtonBorderRadius(
+                  event.target.value
+                )
+              }
               value={buttonBorderRadius}
               type="number"
               id="buttonBorderRadius"
@@ -179,16 +229,20 @@ export default function ButtonGenerator() {
             style={{
               backgroundColor: `${bgcolor}`,
               border: `1px solid ${borderColor}`,
-              borderRadius: Number(buttonBorderRadius),
+              borderRadius: Number(
+                buttonBorderRadius
+              ),
               color: `${fontColor}`,
               display: "inline-block",
               fontFamily: "sans-serif",
               fontSize: 15,
-              lineHeight: `${Number(buttonHeight)}px`,
+              lineHeight: `${Number(
+                buttonHeight
+              )}px`,
               fontWeight: "bold",
               textAlign: "center",
               textDecoration: "none",
-              width: Number(buttonWidth),
+              width: Number(buttonWidth)
             }}
           >
             {buttonText}
@@ -196,8 +250,10 @@ export default function ButtonGenerator() {
         </div>
       </div>
       <div className="form-group col-md-12 px-0">
-        <label htmlFor="Final Code">Final Code</label>
-        <div className="text-area-button-box">
+        <label htmlFor="Final Code">
+          Final Code
+        </label>
+        <div className="final-code-wrapper">
           <textarea
             name="Final Code"
             value={finalButtonCode}
@@ -208,7 +264,7 @@ export default function ButtonGenerator() {
             disabled={true}
             rows={7}
           />
-          <div className="copy-box">
+          <div className="copy-btn-wrapper">
             <Tippy
               content="Copied!"
               placement={"top"}
@@ -218,15 +274,23 @@ export default function ButtonGenerator() {
                   instance.hide();
                 }, 800);
               }}
-              appendTo={() => document.querySelector("#final-code-copy-btn")}
+              appendTo={() =>
+                document.querySelector(
+                  "#final-code-copy-btn"
+                )
+              }
             >
-              <button id="final-code-copy-btn" className="my-btn btn-cancel" onClick={copyHandler}>
+              <button
+                id="final-code-copy-btn"
+                className="btn-action"
+                onClick={copyHandler}
+              >
                 <span>Copy</span>
               </button>
             </Tippy>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

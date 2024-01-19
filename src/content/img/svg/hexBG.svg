@@ -6,7 +6,7 @@
 >
 	 <defs>
 	<pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(1) translate(2) rotate(45)">
-	<polygon style="fill:#f0f0f0; stroke:#fff8f8; stroke-width:1" points="24.8,22 37.3,29.2 37.3,43.7 24.8,50.9 12.3,43.7 12.3,29.2" id="hex" />
+	<polygon style="fill:#f0f0f0; stroke:#e6e6e6; stroke-width:2" points="24.8,22 37.3,29.2 37.3,43.7 24.8,50.9 12.3,43.7 12.3,29.2" id="hex" />
 	<use xlink:href="#hex" x="25" />
 	<use xlink:href="#hex" x="-25" />
 	<use xlink:href="#hex" x="12.5" y="-21.7" />

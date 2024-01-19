@@ -1,39 +1,63 @@
 function About() {
   return (
-    <div className="wrapper">
-      <div className="profile_headline righteous-font-big-bold">About</div>
-      <div className="card-view-container">
-        <p>
-          I am marketing automation specialist with over 5 years of experience, specializing in building, executing, and
-          maintaining digital marketing strategies and campaigns. I am enthusiastic about digital marketing automation,
-          and I always desire to improve automation processes.
-          <br />
-          <br />
-          This website came to live due to the lack of standards and the inconsistent support across the various email
-          clients and webmail services. Developing HTML emails and newsletters which look good and perform across these
-          platforms and device types can be a challenging task. I want this website to be knowledgebase of code snippets
-          that should be ready to copy and paste.
-          <br />
-          <br />
-          If you have any questions/comments or would like to hire me to work on a campaign, feel free to reach out to
-          me at:
-          <br />
-          <br />
-          <span
-            style={{
-              display: "block",
-              width: "100%",
-              textAlign: "center",
-              color: "#386ccc",
-              fontSize: "17px",
-              fontWeight: "bold",
-            }}
+    <>
+      <div className="profile-headline righteous-font-big-bold">
+        About
+      </div>
+      <div className="inside-post-wrapper">
+        As a dedicated marketing automation
+        expert, I specialize in crafting,
+        executing, and managing cutting-edge
+        digital marketing strategies and
+        campaigns. My expertise lies in ensuring
+        that every email design and layout is not
+        only visually appealing but also optimized
+        for user experience, mobile
+        responsiveness, and ready for the dark
+        mode era.
+        <br />
+        <br />
+        <span>
+          <strong>Certificate</strong>
+        </span>
+        <br />
+        Adobe Certified Professional - Marketo
+        Engage Business Practitioner. This
+        recognition underscores my proficiency and
+        mastery in leveraging Marketo Engage to
+        its full potential.
+        <br />
+        <br />
+        <span>
+          <strong>What I Offer:</strong>
+        </span>
+        <br />I offer auditing your Marketo
+        instance to identify inefficiencies and
+        provide recommendations to enhance your
+        digital marketing performance.
+        Additionally, I specialize in streamlining
+        the campaign build processes within
+        Marketo. My focus is on creating
+        repeatable and scalable workflows that not
+        only minimize errors but also
+        significantly reduce time to market. With
+        my expertise, you can expect seamless and
+        efficient campaign execution, ensuring
+        your ideas reach your audience with
+        precision and impact.
+        <br />
+        <br />
+        Contact me at: &nbsp;
+        <span className="righteous-font-small">
+          <a
+            className="link"
+            href="mailto:kasper.debicki92@gmail.com"
           >
             kasper.debicki92@gmail.com
-          </span>
-        </p>
+          </a>
+        </span>
       </div>
-    </div>
+    </>
   );
 }
 

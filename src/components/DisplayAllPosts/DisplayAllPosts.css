@@ -1,0 +1,57 @@
+.content-wrapper {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 10px; /* this */
+}
+
+.card {
+  height: 200px !important;
+  width: 175px;
+  border: 2px solid #000;
+  border-radius: 7px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 0 1 auto;
+  text-align: center;
+  margin: 10px; /* and that, will result in a 10px gap */
+}
+
+.card .title-wrapper span {
+  display: block;
+  font-size: 16px;
+  color: var(--celtic-blue);
+  font-family: "Righteous", Sans-Serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hex-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.title-wrapper {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent
+    url(../../content/img//svg//hexagon_white.svg)
+    no-repeat 50% 50%/160px auto;
+  height: 160px;
+  width: 160px;
+}
+
+@media only screen and (max-width: 409px) {
+  .content-wrapper {
+    justify-content: center;
+  }
+}

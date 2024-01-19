@@ -4,21 +4,25 @@ import bgc from "../post_3/bgc3.png";
 
 let post_3 = {
   id: 3,
-  new: true,
+  new: false,
   postedDate: "08-18-2022",
   updatedDate: "10-08-2022",
   postedBy: "Kasper Debicki",
   title: "Email Template", // title with spaces
   url: "email-template", // should be the same as title but instead of spaces use dashes
-  tags: "#template",
+  tags: ["#template"],
   backgroundImage: bgc, // tile image
   post: (
-    <div>
+    <>
       <div className="post-text">
         <h3>Basic email template</h3>
-      </div>
-      <SyntaxHighlighter wrapLines={true} language="velocity" style={materialOceanic}>
-        {`<!DOCTYPE html>
+
+        <SyntaxHighlighter
+          wrapLines={true}
+          language="velocity"
+          style={materialOceanic}
+        >
+          {`<!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <meta charset="utf-8">
@@ -67,8 +71,9 @@ let post_3 = {
 </body>
 </html>
 `}
-      </SyntaxHighlighter>
-    </div>
-  ),
+        </SyntaxHighlighter>
+      </div>
+    </>
+  )
 };
 export default post_3;

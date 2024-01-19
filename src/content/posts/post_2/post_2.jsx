@@ -10,29 +10,39 @@ let post_2 = {
   postedBy: "Kasper Debicki",
   title: "Velocity Cheat Sheet", // title with spaces
   url: "velocity-cheat-sheet", // should be the same as title but instead of spaces use dashes
-  tags: "#velocity #cheat #sheet",
+  tags: ["#velocity", "#cheat", "#sheet"],
   backgroundImage: bgc, // tile image
   post: (
-    <div>
-      <div className="post-text table-of-contents">
+    <>
+      <div className="post-text">
         <h3>Table of Contents</h3>
         <ul>
           <li>
-            <a href="#if-elseif-else">If / ElseIf / Else</a>
+            <a href="#if-elseif-else">
+              If / ElseIf / Else
+            </a>
           </li>
           <li>
-            <a href="#multiple-values-from-one-field">Multiple values from one field</a>
+            <a href="#multiple-values-from-one-field">
+              Multiple values from one field
+            </a>
           </li>
           <li>
-            <a href="#last-day-of-previous-month">Last day of previous month</a>
+            <a href="#last-day-of-previous-month">
+              Last day of previous month
+            </a>
           </li>
         </ul>
-      </div>
-      <div className="post-text">
-        <h3 id="if-elseif-else">If / ElseIf / Else</h3>
-      </div>
-      <div className="post-text">
-        <SyntaxHighlighter wrapLines={true} language="velocity" style={materialOceanic}>
+
+        <h3 id="if-elseif-else">
+          If / ElseIf / Else
+        </h3>
+
+        <SyntaxHighlighter
+          wrapLines={true}
+          language="velocity"
+          style={materialOceanic}
+        >
           {`#if ($lead.Country == "Poland")
 do something
 #elseif ($lead.Country == "Germany")
@@ -82,12 +92,17 @@ do something else
 #end
 `}
         </SyntaxHighlighter>
-      </div>
-      <div className="post-text">
-        <h3 id="multiple-values-from-one-field">Multiple values from one field</h3>
-      </div>
-      <SyntaxHighlighter wrapLines={true} language="velocity" style={materialOceanic}>
-        {`#set ($fruits = \${lead.fieldWithAllFruits})  
+
+        <h3 id="multiple-values-from-one-field">
+          Multiple values from one field
+        </h3>
+
+        <SyntaxHighlighter
+          wrapLines={true}
+          language="velocity"
+          style={materialOceanic}
+        >
+          {`#set ($fruits = \${lead.fieldWithAllFruits})  
 #set ($arrayOfFruits = $fruits.split(','))
 #if (!$fruits.isEmpty())
     #foreach ($name in $arrayOfFruits)
@@ -96,17 +111,24 @@ do something else
     #else
     No Fruits  
 #end`}
-      </SyntaxHighlighter>
-      <div className="post-text">
-        <h3 id="last-day-of-previous-month">Last day of previous month</h3>
-      </div>
-      <SyntaxHighlighter wrapLines={true} language="velocity" style={materialOceanic}>
-        {`#set ($cal = $date.calendar) 
+        </SyntaxHighlighter>
+
+        <h3 id="last-day-of-previous-month">
+          Last day of previous month
+        </h3>
+
+        <SyntaxHighlighter
+          wrapLines={true}
+          language="velocity"
+          style={materialOceanic}
+        >
+          {`#set ($cal = $date.calendar) 
 $cal.add(2, -1) 
 $cal.set(5, $cal.getActualMaximum(5)) 
 $date.format('MM-dd-yyyy', $cal)`}
-      </SyntaxHighlighter>
-    </div>
-  ),
+        </SyntaxHighlighter>
+      </div>
+    </>
+  )
 };
 export default post_2;
