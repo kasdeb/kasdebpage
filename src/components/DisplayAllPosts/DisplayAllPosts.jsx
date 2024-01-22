@@ -29,8 +29,8 @@ function DisplayAllPosts() {
   };
 
   return (
-    <div className="content-wrapper">
-      <>
+    <>
+      <div className="content-wrapper">
         {allPosts.map((x, index) => {
           return (
             <StyleRoot key={index}>
@@ -71,8 +71,8 @@ function DisplayAllPosts() {
             </StyleRoot>
           );
         })}
-      </>
-    </div>
+      </div>
+    </>
   );
 }
 

@@ -12,6 +12,7 @@
   width: 175px;
   border: 2px solid #000;
   border-radius: 7px;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -48,6 +49,12 @@
     no-repeat 50% 50%/160px auto;
   height: 160px;
   width: 160px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content-wrapper {
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 409px) {
