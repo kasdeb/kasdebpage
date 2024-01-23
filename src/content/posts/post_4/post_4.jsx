@@ -1,4 +1,4 @@
-import bgc from "../post_1/bgc1.png";
+import bgc from "../post_4/bgc4.png";
 import ButtonGenerator from "./ButtonGenerator.jsx";
 
 let post_4 = {
