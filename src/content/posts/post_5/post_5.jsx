@@ -2,8 +2,6 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialOceanic } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import bgc from "../post_5/bgc2.jpg";
 
-let customObjectData_cList = "";
-
 let post_5 = {
   id: 2,
   new: false,
